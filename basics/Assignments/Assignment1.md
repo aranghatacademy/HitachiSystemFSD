@@ -24,6 +24,7 @@ By the end of this assignment, you will be able to:
 
 ### Example Output
 ```
+First Iteration
 Enter number of students: 2
 
 Enter student name: Alice
@@ -34,5 +35,27 @@ Enter student name: Bob
 Enter marks: 92
 Bob received grade: A
 ```
+
+```
+Second Iteration
+
+
+Enter student name: Alice
+Enter marks: 85
+Alice received grade: B
+
+Do you want to continue ? ( Y / N )
+Y
+
+Enter student name: Bob
+Enter marks: 92
+Bob received grade: A
+
+Do you want to continue ? ( Y / N )
+N
+
+Thank you
+```
+
 
 Happy Coding! 🚀
