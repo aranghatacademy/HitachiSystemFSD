@@ -8,6 +8,7 @@
     XXXL
 }
 
+
 struct CartItem
 {
     public string Name;
