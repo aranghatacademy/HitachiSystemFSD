@@ -12,6 +12,7 @@ Create a simple C# console application that simulates a basic student grading sy
 4. Determine the grade based on the marks using conditional statements.
 5. Use a loop to allow input for multiple students.
 6. Display the student's details along with their grade.
+7. Ensure that insted of asking for the number of students as for the choice. Continue (y/N) 
 
 ## Expected Outcome
 By the end of this assignment, you will be able to:
