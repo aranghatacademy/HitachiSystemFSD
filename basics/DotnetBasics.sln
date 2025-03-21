@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumAndStruct", "EnumAndStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopsClasses", "OopsClasses\OopsClasses.csproj", "{960300A6-D371-48FC-B64F-3F44CE62E99C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOpsBanking", "OOpsBanking\OOpsBanking.csproj", "{CFD79DB1-19A6-486D-A385-6CCF0B292910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{960300A6-D371-48FC-B64F-3F44CE62E99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{960300A6-D371-48FC-B64F-3F44CE62E99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{960300A6-D371-48FC-B64F-3F44CE62E99C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD79DB1-19A6-486D-A385-6CCF0B292910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD79DB1-19A6-486D-A385-6CCF0B292910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD79DB1-19A6-486D-A385-6CCF0B292910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD79DB1-19A6-486D-A385-6CCF0B292910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
