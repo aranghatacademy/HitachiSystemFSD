@@ -21,6 +21,11 @@ public abstract class Account {
         Console.WriteLine($"Balance: {Balance}");
         Console.WriteLine($"Interest Rate: {InterestRate}");
     }
+
+    public static Account operator +(Account a, Account b) {
+        a.Balance += b.Balance;
+        return a;
+    }   
 }
 
 //Savings account inherits from Account
@@ -67,5 +72,10 @@ sealed public class LoanAccount : Account {
 
     override public void Deposit(double amount) {
         Balance -= amount;
+    }
+
+    public static LoanAccount operator +(LoanAccount a, LoanAccount b) {
+        a.Balance -= b.Balance;
+        return a;
     }
 }

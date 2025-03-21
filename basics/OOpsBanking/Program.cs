@@ -1,22 +1,22 @@
 ﻿public class Program {
     public static void Main(string[] args) {
 
+        int a = 10;
+        int b = 20;
+        int c = a + b;
+        Console.WriteLine(c);
+
         var savingsAccount = new RegularSavingsAccount();
-        savingsAccount.Balance = 10000;
         var salarySavingsAccount = new SalarySavingsAccount();
-
-        //savingsAccount.Deposit(1000);
-
-        savingsAccount.DisplayAccountDetails();
-        salarySavingsAccount.DisplayAccountDetails();
-
-        //savingsAccount.CalculateInterest(); //5.5%
-        //salarySavingsAccount.CalculateInterest(); //4.5%
         var loanAccount = new LoanAccount();
+
+        savingsAccount.Balance = 10000;
+        salarySavingsAccount.Balance = 20000;
         loanAccount.Balance = 10000;
-        loanAccount.Deposit(1000);
-        loanAccount.DisplayAccountDetails();
-       // loanAccount.CalculateInterest(); //12.5%
+
+       
+       var consolidatedAccount = (salarySavingsAccount + savingsAccount) + loanAccount;
+       Console.WriteLine(consolidatedAccount.Balance);
     
        // Console.WriteLine(savingsAccount.Balance);
        // Console.WriteLine(loanAccount.Balance);
