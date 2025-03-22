@@ -1,0 +1,16 @@
+2025-03-22 12:42:34.158 +05:30 [INF] Waiting for user input...
+2025-03-22 12:42:39.536 +05:30 [INF] User input: Test
+2025-03-22 12:42:39.537 +05:30 [INF] Application is shutting down
+2025-03-22 12:43:29.383 +05:30 [DBG] Application is starting up
+2025-03-22 12:43:29.411 +05:30 [DBG] Debug level log
+2025-03-22 12:43:29.411 +05:30 [INF] Waiting for user input...
+2025-03-22 12:43:30.903 +05:30 [INF] User input: Test
+2025-03-22 12:43:30.903 +05:30 [INF] Application is shutting down
+2025-03-22 13:01:21.833 +05:30 [DBG] Application is starting up
+2025-03-22 13:01:21.859 +05:30 [DBG] Debug level log
+2025-03-22 13:01:21.859 +05:30 [INF] Waiting for user input...
+2025-03-22 13:01:25.486 +05:30 [FTL] The input string 'A' was not in a correct format.
+System.FormatException: The input string 'A' was not in a correct format.
+   at System.Number.ThrowFormatException[TChar](ReadOnlySpan`1 value)
+   at System.Int32.Parse(String s)
+   at Program.Main(String[] args) in /Users/sreehariaranghat/HitachiTraining/HitachiSystemFSD/basics/LoggingBAsics/Program.cs:line 49
