@@ -64,14 +64,30 @@ public delegate void CallbackFile(string fileName);
 public class Program{
 
     public static void Main(string[] args){
+
+        //Request user to choose the file name
+        //As the user to choose the operation
+
+       //Multicast Delegate
        CallbackFile callback = ShareFileThroughEmail;
+       callback += ShareFileInInstagram;
+       callback += PlayFileViaMediaPlayer;
+       
        DownloadFile("meme1.jpeg", callback);
     }
 
     public static void DownloadFile(string fileName, CallbackFile callback){
         Console.WriteLine("Downloading file: " + fileName);
         Thread.Sleep(5000);
-        callback(fileName);
+        
+        foreach(CallbackFile c in callback.GetInvocationList()){
+            try{
+                c(fileName);
+            }
+            catch(Exception ex){
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
     }
 
     public static void ShareFileInInstagram(string fileName){
@@ -80,6 +96,7 @@ public class Program{
 
     public static void ShareFileThroughEmail(string fileName){
         Console.WriteLine("Sharing file through email: " + fileName);
+        throw new Exception("Error in sharing file through email");
     }
 
     public static void PlayFileViaMediaPlayer(string fileName){
