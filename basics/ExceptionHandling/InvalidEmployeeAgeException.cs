@@ -2,11 +2,16 @@ using System;
 
 namespace ExceptionHandling;
 
+
+
 public class InvalidEmployeeAgeException : Exception
 { 
-    public InvalidEmployeeAgeException() : base()
-    {
 
+    //Default constructor
+    public InvalidEmployeeAgeException() : base("Employee is not eligible to work")
+    {
+        //Console.WriteLine("Default constructor called");
+        
     }
 
     public InvalidEmployeeAgeException(string message) : base(message)

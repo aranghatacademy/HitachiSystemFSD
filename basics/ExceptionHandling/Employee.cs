@@ -13,7 +13,9 @@ public class Employee
         DateOfBirth = dateOfBirth;
         if(DateTime.Now.Year - dateOfBirth.Year < 18)
         {
-            throw new InvalidEmployeeAgeException(dateOfBirth);
+            throw new InvalidEmployeeAgeException();
+            //throw new InvalidEmployeeAgeException("Employee is not eligible to work");
+            //throw new InvalidEmployeeAgeException(dateOfBirth);
         }
     }
     

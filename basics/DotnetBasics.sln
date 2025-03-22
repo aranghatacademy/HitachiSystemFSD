@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtentionMethods", "Extenti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingBAsics", "LoggingBAsics\LoggingBAsics.csproj", "{6E7E34E9-CFBC-44F3-839E-D75A1DC43781}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7E34E9-CFBC-44F3-839E-D75A1DC43781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7E34E9-CFBC-44F3-839E-D75A1DC43781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7E34E9-CFBC-44F3-839E-D75A1DC43781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7E34E9-CFBC-44F3-839E-D75A1DC43781}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
