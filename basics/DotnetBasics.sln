@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingBAsics", "LoggingBAs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesInCSharp", "DelegatesInCSharp\DelegatesInCSharp.csproj", "{CE1AF5A8-C0AB-427B-A11D-D1A8DB8EB455}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsInCSharp", "EventsInCSharp\EventsInCSharp.csproj", "{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +68,9 @@ Global
 		{CE1AF5A8-C0AB-427B-A11D-D1A8DB8EB455}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE1AF5A8-C0AB-427B-A11D-D1A8DB8EB455}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE1AF5A8-C0AB-427B-A11D-D1A8DB8EB455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
