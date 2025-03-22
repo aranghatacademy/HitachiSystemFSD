@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOpsBanking", "OOpsBanking\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesBasics", "InterfacesBasics\InterfacesBasics.csproj", "{1600A205-BB00-4203-B7C2-031F9E0DB151}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialClass", "PartialClass\PartialClass.csproj", "{556DCB2B-1BC3-4FD9-9ED5-95C5E4183549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtentionMethods", "ExtentionMethods\ExtentionMethods.csproj", "{AA73E8F0-4FEE-47D0-8240-FB1CFFF0CADF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +42,17 @@ Global
 		{1600A205-BB00-4203-B7C2-031F9E0DB151}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1600A205-BB00-4203-B7C2-031F9E0DB151}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1600A205-BB00-4203-B7C2-031F9E0DB151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556DCB2B-1BC3-4FD9-9ED5-95C5E4183549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556DCB2B-1BC3-4FD9-9ED5-95C5E4183549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556DCB2B-1BC3-4FD9-9ED5-95C5E4183549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556DCB2B-1BC3-4FD9-9ED5-95C5E4183549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA73E8F0-4FEE-47D0-8240-FB1CFFF0CADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA73E8F0-4FEE-47D0-8240-FB1CFFF0CADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA73E8F0-4FEE-47D0-8240-FB1CFFF0CADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA73E8F0-4FEE-47D0-8240-FB1CFFF0CADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
