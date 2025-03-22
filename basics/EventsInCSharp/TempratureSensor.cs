@@ -7,6 +7,7 @@ public class TemperatureSensor
 {
 
     public event EventHandler<ExtremeTempDetectedEventArgs> ExtremeTempDetected;
+    List<ExtremeTempDetectedEventArgs> _temperatureHistory = new List<ExtremeTempDetectedEventArgs>();
 
     public TemperatureSensor()
     {
@@ -19,11 +20,19 @@ public class TemperatureSensor
     {
         var temp = new Random().Next(0, 110);
         if(temp > 80)
-        {
-            ExtremeTempDetected?.Invoke(this, new ExtremeTempDetectedEventArgs
-                                { Message = "Extreme temperature detected"
-                                , Temperature = temp
-                                , Timestamp = DateTime.Now });
+        {   
+            _temperatureHistory.Add(new ExtremeTempDetectedEventArgs{ Message = "Extreme temperature detected"  
+                                    , Temperature = temp
+                                    , Timestamp = DateTime.Now });
+            //IF the template sensor has detected a temperature above 80 for 3 minutes, then notify the fire department
+           // if(_temperatureHistory.Count > 5 && _temperatureHistory.Last().Timestamp > DateTime.Now.AddMinutes(-3))
+            //{
+                 ExtremeTempDetected?.Invoke(this, new ExtremeTempDetectedEventArgs
+                                        { Message = "Extreme temperature detected"
+                                        , Temperature = temp
+                                        , Timestamp = DateTime.Now });
+                _temperatureHistory.Clear();
+            //}
         }
     }
    
