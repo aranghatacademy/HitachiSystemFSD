@@ -2,7 +2,7 @@ using System;
 
 namespace CollectionAndLinq;
 
-public class Employee : IEquatable<Employee>, IComparable<Employee>
+public class Employee : IEquatable<Employee>, IComparable<Employee>, IComparer<Employee>
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -18,5 +18,10 @@ public class Employee : IEquatable<Employee>, IComparable<Employee>
     public int CompareTo(Employee other)
     {
         return Name.CompareTo(other.Name);
+    }
+
+    public int Compare(Employee? x, Employee? y)
+    {
+        return x.Id.CompareTo(y.Id);
     }
 }
