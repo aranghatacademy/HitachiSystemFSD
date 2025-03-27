@@ -1,4 +1,5 @@
-﻿using CollectionAndLinq;
+﻿using System.Collections;
+using CollectionAndLinq;
 
 public class Program
 {
@@ -68,15 +69,19 @@ public class Program
         else
         {
             Console.WriteLine("Karnataka is not in the dictionary");
-        }*/
+        }
 
         Dictionary<Employee, List<DateTime>> employeeAndLeaves = new Dictionary<Employee, List<DateTime>>();
+        SortedDictionary<Employee, List<DateTime>> employeeAndLeaves2 = new SortedDictionary<Employee, List<DateTime>>();
+        SortedList<Employee, List<DateTime>> employeeAndLeaves3 = new SortedList<Employee, List<DateTime>>();
        
         var emp1 = new Employee { Id = 1, Name = "Sree" }; //Diffrent hashcode
         var emp2 = new Employee { Id = 2, Name = "Ramesh" };
         var emp4 = new Employee { Id = 3, Name = "Jhon" }; //Diffrent hashcode
         var emp3 = new Employee { Id = 4, Name = "Babu" }; //Diffrent hashcode
         var emp5 = new Employee { Id = 1, Name = "Sree" }; //Same hashcode
+
+    
 
         employeeAndLeaves.Add(emp1, new List<DateTime> { new DateTime(2024, 1, 1), new DateTime(2024, 1, 2) });
         employeeAndLeaves.Add(emp2, new List<DateTime> { new DateTime(2024, 1, 1), new DateTime(2024, 1, 2) });
@@ -100,6 +105,46 @@ public class Program
                 Console.WriteLine($"Leave Date: {leave}");
             }
         }
-        
+        */
+
+         var emp1 = new Employee { Id = 1, Name = "Sree" }; //Diffrent hashcode
+        var emp2 = new Employee { Id = 2, Name = "Ramesh" };
+        var emp3 = new Employee { Id = 3, Name = "Babu" }; //Diffrent hashcode
+         var emp4 = new Employee { Id = 4, Name = "Jhon" }; //Diffrent hashcode
+ 
+
+        Queue<Employee> employees = new Queue<Employee>();
+        employees.Enqueue(emp1);
+        employees.Enqueue(emp2);
+        employees.Enqueue(emp3);
+        employees.Enqueue(emp4);
+
+        Stack<Employee> employees2 = new Stack<Employee>();
+        employees2.Push(emp1);
+        employees2.Push(emp2);
+        employees2.Push(emp3);
+        employees2.Push(emp4);
+ 
+
+        PrintQueue(employees);
+        PrintStack(employees2);
+           
     }
+
+
+    public static void PrintQueue(Queue<Employee> employees)
+    {
+        Console.WriteLine("Queue -----------------");
+
+        foreach(var employee in employees)
+        {
+            Console.WriteLine($"Employee ID: {employee.Id}, Employee Name: {employee.Name}");
+        }
+    }
+
+    public static void PrintStack(Stack<Employee> employees)
+    {
+        Console.WriteLine("Stack -----------------");
+    }
+    
 }
