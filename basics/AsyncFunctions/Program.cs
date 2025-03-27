@@ -7,13 +7,16 @@ public class Program
         //Continue with is a method that will execute the next method after the first one is finished
         //Equivalent to .then in Js
 
-         
-         var coffee = await MakeCoffee();
-         var breakfast = await MakeBreakfast();
-        
-        Console.WriteLine("Will do something else while waiting for the coffee and breakfast");
-        HaveBreakfast(coffee, breakfast);
+        Task<string> coffee = MakeCoffee();
+        Task<string> breakfast = MakeBreakfast();
 
+        await Task.WhenAll(coffee, breakfast);
+
+         //var breakfast = await MakeBreakfast();
+        
+        
+        await HaveBreakfast(coffee.Result, breakfast.Result);
+        Console.WriteLine("Will do something else while waiting for the coffee and breakfast");
         Console.ReadLine();
     }
 
@@ -23,7 +26,7 @@ public class Program
     {
         Console.WriteLine("Making coffee...");
         // Thread.Sleep(2000);
-        await Task.Delay(2000);
+        await Task.Delay(5000);
 
         Console.WriteLine("Coffee made");
         return "Black Coffee";
@@ -33,16 +36,17 @@ public class Program
     {
         Console.WriteLine("Making breakfast...");
         // Thread.Sleep(2000);
-        await Task.Delay(2000);
+        //await Task.Delay(2000);
 
         Console.WriteLine("Breakfast made");
         //return Task.FromResult("Scrambled Eggs and Toast");
         return "Scrambled Eggs and Toast";
     }
 
-    public static void HaveBreakfast(string coffee, string breakfast)
+    public static async Task HaveBreakfast(string coffee, string breakfast)
     {
         Console.WriteLine($"Having {coffee} and {breakfast} for breakfast");
+        //await Task.Delay(2000);
     }
     
     
