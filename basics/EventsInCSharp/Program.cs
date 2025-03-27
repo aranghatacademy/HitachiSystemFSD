@@ -12,6 +12,7 @@ public class Program
         temperatureSensor.ExtremeTempDetected += _fireAlarmService.OnExtremeTempDetected;
         temperatureSensor.ExtremeTempDetected += _notifyFireDepartment.OnExtremeTempDetected;
         //Add one more listner that will notify all employees to assemble at the assembly point
+        //Log Extreme temperature detected
 
 
         Console.WriteLine("Press Enter to stop the temperature sensor");

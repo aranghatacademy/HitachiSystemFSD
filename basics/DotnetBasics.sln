@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesInCSharp", "Delega
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsInCSharp", "EventsInCSharp\EventsInCSharp.csproj", "{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncFunctions", "AsyncFunctions\AsyncFunctions.csproj", "{8BE6FD16-FECA-4B7B-9241-6994A1471A2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,9 @@ Global
 		{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE6FD16-FECA-4B7B-9241-6994A1471A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE6FD16-FECA-4B7B-9241-6994A1471A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE6FD16-FECA-4B7B-9241-6994A1471A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE6FD16-FECA-4B7B-9241-6994A1471A2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
