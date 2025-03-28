@@ -3,43 +3,46 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumAndStruct", "EnumAndStruct\EnumAndStruct.csproj", "{C362E958-C2EF-443F-B865-4205DD7E6C82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumAndStruct", "LanguageBasics\EnumAndStruct\EnumAndStruct.csproj", "{C362E958-C2EF-443F-B865-4205DD7E6C82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopsClasses", "OopsClasses\OopsClasses.csproj", "{960300A6-D371-48FC-B64F-3F44CE62E99C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopsClasses", "LanguageBasics\OopsClasses\OopsClasses.csproj", "{960300A6-D371-48FC-B64F-3F44CE62E99C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOpsBanking", "OOpsBanking\OOpsBanking.csproj", "{CFD79DB1-19A6-486D-A385-6CCF0B292910}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOpsBanking", "LanguageBasics\OOpsBanking\OOpsBanking.csproj", "{CFD79DB1-19A6-486D-A385-6CCF0B292910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesBasics", "InterfacesBasics\InterfacesBasics.csproj", "{1600A205-BB00-4203-B7C2-031F9E0DB151}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesBasics", "LanguageBasics\InterfacesBasics\InterfacesBasics.csproj", "{1600A205-BB00-4203-B7C2-031F9E0DB151}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialClass", "PartialClass\PartialClass.csproj", "{556DCB2B-1BC3-4FD9-9ED5-95C5E4183549}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialClass", "LanguageBasics\PartialClass\PartialClass.csproj", "{556DCB2B-1BC3-4FD9-9ED5-95C5E4183549}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtentionMethods", "ExtentionMethods\ExtentionMethods.csproj", "{AA73E8F0-4FEE-47D0-8240-FB1CFFF0CADF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtentionMethods", "LanguageBasics\ExtentionMethods\ExtentionMethods.csproj", "{AA73E8F0-4FEE-47D0-8240-FB1CFFF0CADF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "LanguageBasics\ExceptionHandling\ExceptionHandling.csproj", "{38A0A41C-E38E-4ABA-982F-25F6ABB7B613}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingBAsics", "LoggingBAsics\LoggingBAsics.csproj", "{6E7E34E9-CFBC-44F3-839E-D75A1DC43781}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingBAsics", "LanguageBasics\LoggingBAsics\LoggingBAsics.csproj", "{6E7E34E9-CFBC-44F3-839E-D75A1DC43781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesInCSharp", "DelegatesInCSharp\DelegatesInCSharp.csproj", "{CE1AF5A8-C0AB-427B-A11D-D1A8DB8EB455}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesInCSharp", "LanguageBasics\DelegatesInCSharp\DelegatesInCSharp.csproj", "{CE1AF5A8-C0AB-427B-A11D-D1A8DB8EB455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsInCSharp", "EventsInCSharp\EventsInCSharp.csproj", "{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsInCSharp", "LanguageBasics\EventsInCSharp\EventsInCSharp.csproj", "{A10A0212-EEDB-4F66-BA1D-6D1E698A7EAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncFunctions", "AsyncFunctions\AsyncFunctions.csproj", "{8BE6FD16-FECA-4B7B-9241-6994A1471A2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncFunctions", "LanguageBasics\AsyncFunctions\AsyncFunctions.csproj", "{8BE6FD16-FECA-4B7B-9241-6994A1471A2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynCancellation", "AsynCancellation\AsynCancellation.csproj", "{45D2DAFC-E21E-40A4-B1D2-21DF2FC56220}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynCancellation", "LanguageBasics\AsynCancellation\AsynCancellation.csproj", "{45D2DAFC-E21E-40A4-B1D2-21DF2FC56220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaFunctions", "LambdaFunctions\LambdaFunctions.csproj", "{24BF3113-A6C2-4DC6-823E-985258CB1A2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaFunctions", "LanguageBasics\LambdaFunctions\LambdaFunctions.csproj", "{24BF3113-A6C2-4DC6-823E-985258CB1A2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionAndLinq", "CollectionAndLinq\CollectionAndLinq.csproj", "{0A582593-61E2-43B8-B32C-D4F7CFA35548}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionAndLinq", "LanguageBasics\CollectionAndLinq\CollectionAndLinq.csproj", "{0A582593-61E2-43B8-B32C-D4F7CFA35548}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqBasics", "LinqBasics\LinqBasics.csproj", "{58DC61E2-B54F-48CC-91FB-D8AA19CAE3FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqBasics", "LanguageBasics\LinqBasics\LinqBasics.csproj", "{58DC61E2-B54F-48CC-91FB-D8AA19CAE3FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LanguageBasics", "LanguageBasics", "{3527A341-8E45-098F-D01C-90881C9ACF29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFCore", "EFCore", "{BA970FB4-2DB8-6CFB-5E25-7AEB37E0E24D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloEfCore", "EFCore\HelloEfCore\HelloEfCore.csproj", "{AE89550E-3731-40A7-BA65-1C8CF19CD165}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C362E958-C2EF-443F-B865-4205DD7E6C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -102,5 +105,15 @@ Global
 		{58DC61E2-B54F-48CC-91FB-D8AA19CAE3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58DC61E2-B54F-48CC-91FB-D8AA19CAE3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58DC61E2-B54F-48CC-91FB-D8AA19CAE3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE89550E-3731-40A7-BA65-1C8CF19CD165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE89550E-3731-40A7-BA65-1C8CF19CD165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE89550E-3731-40A7-BA65-1C8CF19CD165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE89550E-3731-40A7-BA65-1C8CF19CD165}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE89550E-3731-40A7-BA65-1C8CF19CD165} = {BA970FB4-2DB8-6CFB-5E25-7AEB37E0E24D}
 	EndGlobalSection
 EndGlobal
