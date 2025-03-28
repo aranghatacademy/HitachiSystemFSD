@@ -23,28 +23,15 @@ public class Employee
     public string? Note { get; set; }
 
     public decimal? Salary { get; set; }
+
+    [Timestamp]
+    public byte [] RowVersion { get; set; }
+
+    public DateTime? LastModified { get; set; }
+
+    public DateTime? DeletedDate { get; set; }
 }
 
-public enum LeaveStatus
-{
-    Pending,
-    Approved,
-    Rejected
-}
 
-public class LeaveRequest
-{
-    [Column("LeaveRequestId")]
-    public int Id { get; set; }
 
-    public Employee Employee { get; set; }
 
-    public DateTime StartDate { get; set; }
-
-    public DateTime EndDate { get; set; }
-
-    public string Reason { get; set; }
-
-    public LeaveStatus Status { get; set; }
-    
-}
