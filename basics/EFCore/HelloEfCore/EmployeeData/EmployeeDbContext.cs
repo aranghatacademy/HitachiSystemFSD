@@ -11,6 +11,7 @@ public class EmployeeDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Database=EmployeeDb;Username=postgres;Password=@rt1234$$");
+        //optionsBuilder.UseSqlServer("Server=localhost;Database=EmployeeDb;User=postgres;Password=@rt1234$$;TrustServerCertificate=True");
+         optionsBuilder.UseNpgsql("Host=localhost;Database=EmployeeDb;Username=postgres;Password=@rt1234$$");
     }
 }
