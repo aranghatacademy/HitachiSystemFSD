@@ -5,9 +5,23 @@ namespace HellpAspNet.Controllers;
 
 //This is a controller class
 
+public class CityAndCountry
+{
+     public List<string>  Cities {get; set;}
+     public List<string> Countries {get; set;}
+}
+
+
 public class HomeController : Controller
 {
-     List<string> cities = new List<string>(){"New York", "Los Angeles", "Chicago", "Houston", "Miami"};
+     CityAndCountry cityAndCountry = new CityAndCountry();
+    
+    public HomeController()
+    {
+         cityAndCountry.Cities = new List<string>(){"New York", "Los Angeles", "Chicago", "Houston", "Miami"};
+         cityAndCountry.Countries = new List<string>(){"USA", "Canada", "Mexico", "Brazil", "Argentina"};
+    }
+
      //Action Method
      public IActionResult Index()
      {
@@ -16,7 +30,7 @@ public class HomeController : Controller
           //Sent as a Model
           ViewBag.Title = "Hello ASP.NET";
           ViewBag.Message = "Welcome to ASP.NET";
-          return View(cities);
+          return View(cityAndCountry);
      }
 
 

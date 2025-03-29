@@ -1,4 +1,6 @@
-@model List<string>
+@using HellpAspNet.Controllers;
+@model CityAndCountry
+
 
 <h1>@ViewBag.Title</h1>
 <p>@ViewBag.Message</p>
@@ -9,10 +11,32 @@
 }
 
 <select>
-    @foreach(var city in Model)
+    @foreach(var city in Model.Cities)
     {
          <option value="@city">@city</option>
     }
 </select>
 
+<select>
+    @foreach(var country in Model.Countries)
+    {
+         <option value="@country">@country</option>
+    }
+</select>
+
+<table>
+    <thead>
+        <tr>
+            <th>City</th>   
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var city in Model.Cities)
+        {
+             <tr>
+                <td>@city</td>
+             </tr>
+        }
+    </tbody>
+</table>
 
