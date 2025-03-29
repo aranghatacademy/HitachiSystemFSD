@@ -10,9 +10,10 @@ namespace LibMan.Web.Controllers
         private readonly BookDbContext _context;
         private readonly ILogger<BooksController> _logger;
 
-        public BooksController(ILogger<BooksController> logger)
+        public BooksController(ILogger<BooksController> logger
+                            , BookDbContext context)
         {
-            _context = new BookDbContext();
+            _context = context;
             _logger = logger;
         }
 

@@ -8,9 +8,10 @@ namespace LibMan.Web.Controllers
     {
         private readonly BookDbContext _context;
         private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger
+                            , BookDbContext context)
         {
-            _context = new BookDbContext();
+            _context = context;
             _logger = logger;
         }
         // GET: HomeController

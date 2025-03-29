@@ -7,8 +7,8 @@ public class BookDbContext : DbContext
 {
     public DbSet<Book> Books { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //Allows the DbContext to be injected into the controller
+    public BookDbContext(DbContextOptions<BookDbContext> options) : base(options)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Database=BooksDb;Username=postgres;Password=@rt1234$$");
     }
 }

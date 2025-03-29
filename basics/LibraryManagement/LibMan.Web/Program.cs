@@ -1,3 +1,6 @@
+using LibMan.Web.Db;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
@@ -5,6 +8,10 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddLogging(log => 
         log.AddConsole()
         .AddDebug());
+
+//Add the database context
+builder.Services.AddDbContext<BookDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
