@@ -1,5 +1,4 @@
-using LibMan.Web.Models;
-using Microsoft.AspNetCore.Mvc;
+
 
 namespace LibMan.Web.Controllers
 {
@@ -15,7 +14,10 @@ namespace LibMan.Web.Controllers
         [HttpPost]
         public IActionResult Index(Book book)
         {
-            
+            if (ModelState.IsValid)
+            {
+                //ToDo : Save this book to the database
+            }
             return View(book);
         }
 
