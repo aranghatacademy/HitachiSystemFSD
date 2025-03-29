@@ -1,6 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
+//Add the logging providers
+builder.Services.AddLogging(log => 
+        log.AddConsole()
+        .AddDebug());
+
 var app = builder.Build();
 
 app.UseRouting();
