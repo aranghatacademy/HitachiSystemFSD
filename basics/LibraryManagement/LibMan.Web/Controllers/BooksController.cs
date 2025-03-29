@@ -1,10 +1,19 @@
 
 
+using LibMan.Web.Db;
+
 namespace LibMan.Web.Controllers
 {
     [Route("books")]
     public class BooksController : Controller
     {
+        private readonly BookDbContext _context;
+
+        public BooksController()
+        {
+            _context = new BookDbContext();
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -16,7 +25,9 @@ namespace LibMan.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                //ToDo : Save this book to the database
+                _context.Books.Add(book);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
             }
             return View(book);
         }
