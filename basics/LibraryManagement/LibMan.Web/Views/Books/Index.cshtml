@@ -1,0 +1,30 @@
+﻿@model Book
+
+<h1>Create Book</h1>
+
+<form action="/books" method="post">
+    <div>
+        <label asp-for="Title">Title</label>
+        @Html.TextBoxFor(m => m.Title, new { @class = "border-2 border-gray-300 rounded-md p-2" })
+    </div>
+    <div>
+        <label asp-for="Author">Author</label>
+        @Html.TextBoxFor(m => m.Author, new { @class = "border-2 border-gray-300 rounded-md p-2" })
+    </div>
+    <div>
+        <label asp-for="Description">Description</label>
+        @Html.TextBoxFor(m => m.Description, new { @class = "border-2 border-gray-300 rounded-md p-2" })
+    </div>
+    <div>
+        <label asp-for="ImageUrl">Image URL</label>
+        @Html.TextBoxFor(m => m.ImageUrl, new { @class = "border-2 border-gray-300 rounded-md p-2" })
+    </div>
+    <div>
+        <label asp-for="Category">Category</label>
+        @Html.DropDownListFor(m => m.Category
+                    , Enum.GetValues(typeof(Category)).Cast<Category>().Select(e => new SelectListItem(e.ToString(), e.ToString()))
+                    , new { @class = "border-2 border-gray-300 rounded-md p-2" }
+                )
+    </div>
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Create</button>
+</form>
