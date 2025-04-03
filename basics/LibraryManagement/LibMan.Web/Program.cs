@@ -13,6 +13,10 @@ builder.Services.AddLogging(log =>
 builder.Services.AddDbContext<BookDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+//Add the users database context
+//builder.Services.AddDbContext<UserDbContext>(options =>
+ //   options.UseNpgsql(builder.Configuration.GetConnectionString("UsersDbConnection")));
+
 var app = builder.Build();
 
 app.UseRouting();
