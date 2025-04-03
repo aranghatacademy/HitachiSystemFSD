@@ -1,3 +1,4 @@
+using LibMan.Web;
 using LibMan.Web.Db;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,9 @@ builder.Services.AddDbContext<BookDbContext>(options =>
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+app.UseMiddleware<LogUserRequestMiddleware>();
+app.UseMiddleware<CalculatRequestTimeMiddleware>();
 app.UseRouting();
 app.MapControllers();
 app.MapControllerRoute(

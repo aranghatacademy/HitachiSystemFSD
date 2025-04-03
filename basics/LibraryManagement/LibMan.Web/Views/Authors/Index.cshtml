@@ -2,6 +2,7 @@
 
 <div class="flex flex-col gap-2 w-1/2 mx-auto">
     <h1 class="text-2xl font-bold">Books Written by @ViewBag.Author</h1>
+    <p class="text-sm text-gray-500">Total Books: @Model.Count</p>
     <div class="grid grid-cols-4 gap-4 mt-8">
         @foreach (var book in Model)
         {
