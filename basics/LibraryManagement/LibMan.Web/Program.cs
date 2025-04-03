@@ -15,7 +15,14 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddAuthorization();
 
 //Provide the sms service
-builder.Services.AddScoped<ISmsService, VodafoneSmsService>();
+//Only one instance of the service will be created accross all users and all requests
+builder.Services.AddSingleton<ISmsService, AirtelSmsService>();
+
+//Only one instance of the service will be created for each request per user
+///builder.Services.AddScoped<ISmsService, VodafoneSmsService>();
+
+//A new instance of the service will be created for each request and each service
+//builder.Services.AddTransient<ISmsService, VodafoneSmsService>();
 
 //Add the logging providers
 builder.Services.AddLogging(log => 

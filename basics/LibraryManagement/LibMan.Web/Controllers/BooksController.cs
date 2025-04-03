@@ -17,7 +17,7 @@ namespace LibMan.Web.Controllers
         //as a dependency
         public BooksController(ILogger<BooksController> logger
                             , BookDbContext context
-                            , ISmsService smsService)
+                            , ISmsService smsService) // To run this controller, we need a  sms service
         {
             _context = context;
             _logger = logger;
