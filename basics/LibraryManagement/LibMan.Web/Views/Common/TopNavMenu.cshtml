@@ -1,12 +1,22 @@
-﻿<div class="flex justify-between items-center p-4 bg-gray-800 text-white">
+﻿@using System.Security.Claims
+<div class="flex justify-between items-center p-4 bg-gray-800 text-white">
     <div class="text-2xl font-bold"><img src="/images/logo.png" alt="Library Management" class="w-10 h-10">Library Management</div>
     <div class="flex space-x-4">
         <a href="/" class="hover:text-gray-300">Home</a>
         <a href="/books" class="hover:text-gray-300">Books</a>
         <a href="/categories" class="hover:text-gray-300">Categories</a>
     </div>
-    <div>
-        <a href="/login" class="hover:text-gray-300">Login</a>
-        <a href="/register" class="hover:text-gray-300">Register</a>
-    </div>
+    @if(!Context.User.Identity.IsAuthenticated)
+    {
+        <div>
+            <a href="/login" class="hover:text-gray-300">Login</a>
+            <a href="/register" class="hover:text-gray-300">Register</a>
+        </div>
+    }
+    else{
+        <div class="flex space-x-4">
+            <div>Welcome Back @Context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value</div>
+            <a href="/logout" class="hover:text-gray-300">Logout</a>
+        </div>
+    }
 </div>
