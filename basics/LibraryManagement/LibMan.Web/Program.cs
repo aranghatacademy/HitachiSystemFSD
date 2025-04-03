@@ -8,11 +8,14 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options => {
-        options.LoginPath = "/Login";
-        options.AccessDeniedPath = "/Login";
+        options.LoginPath = "/auth/login";
+        options.AccessDeniedPath = "/auth/login";
     });
 
 builder.Services.AddAuthorization();
+
+//Provide the sms service
+builder.Services.AddScoped<ISmsService, VodafoneSmsService>();
 
 //Add the logging providers
 builder.Services.AddLogging(log => 

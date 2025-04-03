@@ -6,17 +6,22 @@ using Microsoft.AspNetCore.Authorization;
 namespace LibMan.Web.Controllers
 {
     [Route("books")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class BooksController : Controller
     {
         private readonly BookDbContext _context;
         private readonly ILogger<BooksController> _logger;
+        private readonly ISmsService _smsService;
 
+        //All services are injected through the constructor
+        //as a dependency
         public BooksController(ILogger<BooksController> logger
-                            , BookDbContext context)
+                            , BookDbContext context
+                            , ISmsService smsService)
         {
             _context = context;
             _logger = logger;
+            _smsService = smsService;
         }
 
         [HttpGet]
@@ -33,6 +38,9 @@ namespace LibMan.Web.Controllers
                 _logger.LogInformation("Book data is valid: {book}", book);
                 _context.Books.Add(book);
                 _context.SaveChanges();
+
+                //var smsService = new VodafoneSMSService();
+                _smsService.SendSMS("Book saved successfully: {book}", "91000000000");
 
                 _logger.LogInformation("Book saved successfully: {book}", book);
                 return RedirectToAction("Index");
