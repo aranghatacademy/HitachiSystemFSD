@@ -3,3 +3,14 @@
  4/3/2025 11:32:48 AM : /books GET 20ms
  4/3/2025 11:32:49 AM : / GET 34ms
  4/3/2025 11:32:51 AM : /Authors/Robin%20Sharma GET 4ms
+ 4/3/2025 12:14:03 PM : /register GET 1ms
+ 4/3/2025 12:14:09 PM : /books GET 6ms
+ 4/3/2025 12:15:06 PM : / GET 45ms
+ 4/3/2025 12:36:19 PM : /books GET 19ms
+ 4/3/2025 12:40:18 PM : /books GET 111ms
+ 4/3/2025 12:41:16 PM : /books GET 17ms
+ 4/3/2025 12:41:16 PM : /Login GET 2ms
+ 4/3/2025 12:42:23 PM : /Login GET 44ms
+ 4/3/2025 12:42:29 PM : / GET 614ms
+ 4/3/2025 12:42:36 PM : /books GET 6ms
+ 4/3/2025 12:42:36 PM : /Login GET 0ms

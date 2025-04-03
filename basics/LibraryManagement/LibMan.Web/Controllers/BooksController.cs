@@ -1,10 +1,12 @@
 
 
 using LibMan.Web.Db;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibMan.Web.Controllers
 {
     [Route("books")]
+    [Authorize]
     public class BooksController : Controller
     {
         private readonly BookDbContext _context;

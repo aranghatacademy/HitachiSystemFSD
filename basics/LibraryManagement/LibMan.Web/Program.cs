@@ -1,9 +1,18 @@
 using LibMan.Web;
 using LibMan.Web.Db;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options => {
+        options.LoginPath = "/Login";
+        options.AccessDeniedPath = "/Login";
+    });
+
+builder.Services.AddAuthorization();
 
 //Add the logging providers
 builder.Services.AddLogging(log => 
@@ -21,9 +30,13 @@ builder.Services.AddDbContext<BookDbContext>(options =>
 var app = builder.Build();
 
 app.UseStaticFiles();
-app.UseMiddleware<LogUserRequestMiddleware>();
-app.UseMiddleware<CalculatRequestTimeMiddleware>();
+app.UseLogUserRequest();
+app.UseCalculatRequestTime();
+//app.UseMiddleware<LogUserRequestMiddleware>();
+//app.UseMiddleware<CalculatRequestTimeMiddleware>();
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 app.MapControllerRoute(
     name: "default",

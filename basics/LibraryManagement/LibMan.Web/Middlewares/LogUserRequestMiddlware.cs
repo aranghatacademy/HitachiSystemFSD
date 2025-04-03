@@ -23,3 +23,11 @@ public class LogUserRequestMiddleware
     }
     
 }
+
+public static class LogUserRequestMiddlewareExtensions
+{
+    public static IApplicationBuilder UseLogUserRequest(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware<LogUserRequestMiddleware>();
+    }
+}

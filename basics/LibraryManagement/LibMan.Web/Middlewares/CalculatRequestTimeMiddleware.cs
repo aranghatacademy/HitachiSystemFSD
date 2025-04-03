@@ -22,3 +22,12 @@ public class CalculatRequestTimeMiddleware
         File.AppendAllText("timetaken.txt", $" {DateTime.Now} : {context.Request.Path} {context.Request.Method} {stopwatch.ElapsedMilliseconds}ms\n");
     }
 }
+
+public static class CalculatRequestTimeMiddlewareExtensions
+{
+    public static IApplicationBuilder UseCalculatRequestTime(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware<CalculatRequestTimeMiddleware>();
+    }
+    
+}
