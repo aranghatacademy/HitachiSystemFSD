@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{D82C56D6-B2CD-F611-9E31-04638F7EC30E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecom.Entities", "Src\Ecom.Entities\Ecom.Entities.csproj", "{E8FCBF72-649C-4FE7-AD68-F5840C958068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecom.Data", "Src\Ecom.Data\Ecom.Data.csproj", "{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8FCBF72-649C-4FE7-AD68-F5840C958068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8FCBF72-649C-4FE7-AD68-F5840C958068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8FCBF72-649C-4FE7-AD68-F5840C958068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8FCBF72-649C-4FE7-AD68-F5840C958068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E8FCBF72-649C-4FE7-AD68-F5840C958068} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+	EndGlobalSection
+EndGlobal
