@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecom.Entities", "Src\Ecom.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecom.Data", "Src\Ecom.Data\Ecom.Data.csproj", "{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECom.DataTests", "Tests\ECom.DataTests\ECom.DataTests.csproj", "{86866EDE-730D-408B-AC37-434724CB0E38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,9 +32,14 @@ Global
 		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86866EDE-730D-408B-AC37-434724CB0E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86866EDE-730D-408B-AC37-434724CB0E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86866EDE-730D-408B-AC37-434724CB0E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86866EDE-730D-408B-AC37-434724CB0E38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E8FCBF72-649C-4FE7-AD68-F5840C958068} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{9039CC6F-1BEF-47EA-8324-06D8A0A85BD7} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{86866EDE-730D-408B-AC37-434724CB0E38} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal
