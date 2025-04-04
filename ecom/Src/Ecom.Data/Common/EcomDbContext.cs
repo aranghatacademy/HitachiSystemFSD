@@ -17,14 +17,14 @@ public class EcomDbContext : DbContext
 
     public DbSet<Order> Orders { get; set; }
 
-    /*public EcomDbContext(DbContextOptions<EcomDbContext> options) : base(options)
+    public EcomDbContext(DbContextOptions<EcomDbContext> options) : base(options)
     {
-    }*/
+    }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql("Host=localhost;Database=ecom;Username=postgres;Password=@rt1234$$");
-    }
+    }*/
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

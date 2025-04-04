@@ -1,4 +1,5 @@
 ﻿using Ecom.Data;
+using Ecom.Data.Exceptions;
 using Ecom.Data.REpositories.Customers;
 using Ecom.Entities;
 using Microsoft.Extensions.Logging;
@@ -16,7 +17,7 @@ public class UserRepositoryTest
     [SetUp]
     public void Setup()
     {
-        _context = new EcomDbContext();
+        _context = new EcomDbContext(null);
         _customerRepository = new CustomerRepository(_context, _logger);
     }
 
@@ -56,7 +57,7 @@ public class UserRepositoryTest
         await _customerRepository.Add(customer);
 
         // Assert
-        Assert.ThrowsAsync<Exception>(async () => await _customerRepository.Add(customer), "Customer already exists");
+        Assert.ThrowsAsync<DuplicateEmailException>(async () => await _customerRepository.Add(customer));
         
     }
 

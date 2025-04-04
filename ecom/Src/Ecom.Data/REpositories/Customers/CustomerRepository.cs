@@ -1,4 +1,5 @@
 using System;
+using Ecom.Data.Exceptions;
 using Ecom.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -23,7 +24,7 @@ public class CustomerRepository : ICustomerRepository
             _logger.LogError("Customer already exists");
 
             //ToDo : Create and throw a custom exception DuplicateEmailException
-            throw new Exception("Customer already exists");
+            throw new DuplicateEmailException("Customer already exists");
          }
 
          _logger.LogDebug("New Customer Adding customer to database");
@@ -52,7 +53,9 @@ public class CustomerRepository : ICustomerRepository
         if(customer == null)
         {
             _logger.LogError("Customer not found");
-            throw new Exception("Customer not found");
+
+            //ToDo : Create and throw a custom exception CustomerNotFoundException
+            throw new CustomerNotFoundException("Customer not found");
         }
         return customer;
     }
