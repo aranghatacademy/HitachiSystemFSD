@@ -1,0 +1,9 @@
+@model IEnumerable<Ecom.Entities.Product>
+
+<h1>Product Catalog</h1>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.Name</li>
+    }
+</ul>

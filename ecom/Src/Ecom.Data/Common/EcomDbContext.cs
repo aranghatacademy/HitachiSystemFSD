@@ -21,10 +21,10 @@ public class EcomDbContext : DbContext
     {
     }
 
-    /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql("Host=localhost;Database=ecom;Username=postgres;Password=@rt1234$$");
-    }*/
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
