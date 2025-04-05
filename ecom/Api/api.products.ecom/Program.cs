@@ -37,8 +37,8 @@ builder.Services.AddAuthorization(options => options.AddPolicy(JwtBearerDefaults
         , policy => policy.RequireAuthenticatedUser()));
 
 
-builder.Services.AddDbContext<EcomDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+//builder.Services.AddDbContext<EcomDbContext>(options =>
+   // options.UseNpgsql(builder.Environment.));
 
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();

@@ -1,7 +1,9 @@
 using System;
 using System.Buffers.Text;
+using System.Dynamic;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
 using Ecom.Data;
 using Ecom.Entities;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
@@ -35,8 +37,11 @@ public class RegistrationService : IRegistrationService
             PhoneNumber = "",
             Address = "",
             ApiKey = GenerateApiKey(request.Email, request.Password),
-            ApiSecret = GenerateApiSecret(request.Email, request.Password)
+            ApiSecret = GenerateApiSecret(request.Email, request.Password),
+            AdditionalInfo = JsonDocument.Parse(JsonSerializer.Serialize(request.AdditionalInfo))
          };
+
+          
 
          customer.Password = new PasswordHasher<Customer>().HashPassword(customer, request.Password);
 

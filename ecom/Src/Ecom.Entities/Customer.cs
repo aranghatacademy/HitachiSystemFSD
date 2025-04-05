@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json;
 
 namespace Ecom.Entities;
 
@@ -17,4 +18,8 @@ public class Customer : User
 
     public string ApiKey { get; set; }
 
+    [Column(TypeName = "jsonb")]
+    public JsonDocument? AdditionalInfo { get; set; }
+
 }
+

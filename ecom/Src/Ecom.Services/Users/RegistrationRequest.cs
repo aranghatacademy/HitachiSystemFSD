@@ -16,4 +16,6 @@ public class RegistrationRequest
     [Required]
     [MaxLength(100)]
     public string Password { get; set; }
+
+    public dynamic AdditionalInfo { get; set; }
 }

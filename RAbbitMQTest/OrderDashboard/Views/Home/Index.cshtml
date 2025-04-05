@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+</head>
+<body>
+    <div class="flex flex-col gap-4 w-full">
+        <h1 class="text-2xl font-bold">Order Dashboard</h1>
+
+        <div id="totalOrders" class="text-lg text-center"></div>
+        <div id="totalPrice" class="text-lg text-center"></div>
+        <div id="orders" class="flex flex-wrap gap-4 justify-center max-w-7xl w-full mx-auto rounded-md p-4"></div>
+
+    </div>
+
+     <script>
+        let totalOrders = 0;
+        let totalPrice = 0;
+        const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/orders")
+        .build();
+
+        connection.on("NewOrder", (message) => {
+            console.log(message);
+            totalOrders++;
+            
+
+            document.getElementById("totalOrders").innerHTML = `Total Orders: ${totalOrders}`;
+            document.getElementById("totalPrice").innerHTML = `Total Price: ${totalPrice}`;
+
+            let order = JSON.parse(message);
+            console.log(order);
+            totalPrice += parseInt(order.Price);
+            const ordersDiv = document.getElementById("orders");
+            ordersDiv.innerHTML += `
+                <div class="flex flex-col gap-2 bg-gray-100 p-4 border-2 border-gray-300 rounded-md shadow-md w-full mb-4">
+                    <h2 class="text-lg font-bold">${order.Name}</h2>
+                    <p class="text-sm">${order.Price}</p>
+                </div>
+            `;
+        });
+
+        connection.start();
+     </script>
+</body>
+</html>

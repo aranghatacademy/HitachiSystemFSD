@@ -1,0 +1,125 @@
+﻿@{
+    var menus = (List<SampleApp.Model.RoleMenu>)ViewBag.Menus;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+            @foreach (var menu in menus.Where(m => m.ParentId == 0))
+            {
+                 <li>
+                    <a class="dropdown-item" href="#" data-bs-toggle="dropdown" aria-expanded="false">@menu.Name</a>
+                    <ul class="dropdown-menu" id="sub-menu-@menu.Id">
+                    @foreach (var subMenu in menus.Where(m => m.ParentId == menu.Id))
+                    {
+                        <li><a class="dropdown-item" href="#">@subMenu.Name</a></li>
+                    }
+                 </ul>
+                </li>
+            }
+        </ul>
+    </div>
+
+
+    <p>Register Page</p>
+
+    <form action="/" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="password" placeholder="Password">
+        <div>
+            <label>Are you a teacher?</label>
+            <input type="radio" name="IsTeacher" value="true" checked> Yes
+            <input type="radio" name="IsTeacher" value="false"> No
+        </div>
+        <select name="state" onchange="getDepartments(this.value)">
+            <option value="">Select State</option>
+            @foreach (var state in ViewBag.States)
+            {
+                <option value="@state.Id">@state.Name</option>
+            }
+        </select>
+        <div id="departments">
+
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(int i = 0; i < 10; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="text" name="name" placeholder="Name">
+                    </td>
+                    <td>
+                        <input type="text" name="email" placeholder="Email">
+                    </td>
+                    <td>
+                        <input type="text" name="password" placeholder="Password">
+                    </td>
+                    <td>
+                        <select name="state" onchange="getDepartments(this.value)">
+                            <option value="">Select State</option>
+                            @foreach (var state in ViewBag.States)
+                            {
+                                <option value="@state.Id">@state.Name</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+            }
+    </table>
+
+    <script>
+        function getDepartments(state) {
+            console.log(state);
+            fetch(`/get-departments?stateId=${state}`)
+                .then(response => response.json())
+                .then(data => {
+                    const departments = document.getElementById('departments');
+                    departments.innerHTML = '';
+                    data.forEach(department => {
+                        const input = document.createElement('input');
+                        input.type = 'checkbox';
+                        input.name = 'departments';
+                        input.value = department.id;
+
+
+                        const label = document.createElement('label');
+                        label.textContent = department.name;
+                        label.appendChild(input);
+                        departments.appendChild(label);
+                    });
+                });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

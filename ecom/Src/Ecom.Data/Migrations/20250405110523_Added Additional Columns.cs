@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -7,7 +8,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Ecom.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class NewDbCreate : Migration
+    public partial class AddedAdditionalColumns : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -44,6 +45,9 @@ namespace Ecom.Data.Migrations
                     Discriminator = table.Column<string>(type: "character varying(8)", maxLength: 8, nullable: false),
                     PhoneNumber = table.Column<string>(type: "character varying(10)", maxLength: 10, nullable: true),
                     Address = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    ApiSecret = table.Column<string>(type: "text", nullable: true),
+                    ApiKey = table.Column<string>(type: "text", nullable: true),
+                    AdditionalInfo = table.Column<JsonDocument>(type: "jsonb", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
